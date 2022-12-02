@@ -25,12 +25,7 @@ public class PostController {
 		return iPost.findAllPost();
 	}
 
-	@GetMapping("/{thread}")
-	public List<Post> getPostByThread(@PathVariable String thread) {
-		return iPost.findPostByThread(thread);
-	}
-
-	@GetMapping("/check/{thread}/{title}")
+	@GetMapping("/{thread}/{title}")
 	public boolean checkThreadAndTitle(@PathVariable String thread, @PathVariable String title) {
 		return iPost.checkPostByTitleAndThread(thread, title);
 	}

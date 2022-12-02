@@ -22,22 +22,14 @@ public class NewTest {
 	}
 
 	@Test
-	public void getPostByThreadAndThreadExists() {
+	public void getPostByThreadAndNameAndThreadAndNameExist() {
 		String thread = "cars";
+		String title = "ferrari";
 		int size = 0;
 
-		String response = given().when().get(thread).then().assertThat().statusCode(200).extract().response()
-				.asString();
-		JsonPath js = new JsonPath(response);
-		size = js.getInt("size()");
-
-		Assert.assertNotEquals(size, 0);
-
-		String responseThreads;
-		for (int i = 0; i < size; i++) {
-			responseThreads = js.get("[" + i + "].thread");
-			Assert.assertEquals(responseThreads.toLowerCase(), thread);
-		}
+		String response = given().when().get(thread + "/" + title).then().assertThat().statusCode(200).extract()
+				.response().asString();
+		System.err.println(response);
 	}
 
 	@Test
