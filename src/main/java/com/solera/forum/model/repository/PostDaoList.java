@@ -96,7 +96,7 @@ public class PostDaoList implements PostDaoInterface {
 		boolean postAlreadyExists = true;
 		List<Post> postByThread = findPostByThread(thread);
 		for (int i = 0; i < postByThread.size(); i++) {
-			if (postByThread.get(i).getTitle().toLowerCase().equals(title)) {
+			if (postByThread.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
 				return postAlreadyExists;
 			}
 		}

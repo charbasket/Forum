@@ -2,19 +2,19 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-02T12:10:18 CET" name="Default suite" finished-at="2022-12-02T12:10:20 CET" duration-ms="1395">
+  <suite started-at="2022-12-02T12:15:23 CET" name="Default suite" finished-at="2022-12-02T12:15:25 CET" duration-ms="1400">
     <groups>
     </groups>
-    <test started-at="2022-12-02T12:10:18 CET" name="Default test" finished-at="2022-12-02T12:10:20 CET" duration-ms="1395">
+    <test started-at="2022-12-02T12:15:23 CET" name="Default test" finished-at="2022-12-02T12:15:25 CET" duration-ms="1400">
       <class name="com.solera.forum.NewTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.solera.forum.NewTest@465232e9]" started-at="2022-12-02T12:10:18 CET" name="setUp" finished-at="2022-12-02T12:10:19 CET" duration-ms="394" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.solera.forum.NewTest@465232e9]" started-at="2022-12-02T12:15:23 CET" name="setUp" finished-at="2022-12-02T12:15:24 CET" duration-ms="393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="getPostByThreadAndNameAndThreadAndNameExist()[pri:0, instance:com.solera.forum.NewTest@465232e9]" started-at="2022-12-02T12:10:19 CET" name="getPostByThreadAndNameAndThreadAndNameExist" finished-at="2022-12-02T12:10:20 CET" duration-ms="966" status="PASS">
+        <test-method signature="getPostByThreadAndNameAndThreadAndNameDoesNotExist()[pri:0, instance:com.solera.forum.NewTest@465232e9]" started-at="2022-12-02T12:15:24 CET" name="getPostByThreadAndNameAndThreadAndNameDoesNotExist" finished-at="2022-12-02T12:15:25 CET" duration-ms="974" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPostByThreadAndNameAndThreadAndNameExist -->
+        </test-method> <!-- getPostByThreadAndNameAndThreadAndNameDoesNotExist -->
       </class> <!-- com.solera.forum.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
