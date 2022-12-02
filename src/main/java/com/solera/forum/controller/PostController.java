@@ -32,7 +32,7 @@ public class PostController {
 		return iPost.checkPostByTitleAndThread(thread, title);
 	}
 
-	@GetMapping("/checkBody")
+	@PostMapping("/checkBody")
 	public boolean checkBodyContainsBannedWords(@RequestBody String body) {
 		return iPost.bodyContainsBannedWords(body);
 	}

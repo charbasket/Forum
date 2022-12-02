@@ -24,7 +24,6 @@ public class PostTest {
 	public void getPostByThreadAndNameAndThreadAndNameExist() {
 		String thread = "cars";
 		String title = "ferrari";
-		int size = 0;
 
 		String response = given().when().get(thread + "/" + title).then().assertThat().statusCode(200).extract()
 				.response().asString();
@@ -35,11 +34,19 @@ public class PostTest {
 	public void getPostByThreadAndNameAndThreadAndNameDoesNotExist() {
 		String thread = "cars";
 		String title = "ferrarii";
-		int size = 0;
 
 		String response = given().when().get(thread + "/" + title).then().assertThat().statusCode(200).extract()
 				.response().asString();
 		Assert.assertEquals(response, "false");
+	}
+
+	@Test
+	public void checkBodyContainsBannedWords() {
+		String body = "hola";
+
+		String response = given().header("Content-type", "text/plain").body(body).when().post("/checkBody").then()
+				.assertThat().statusCode(200).extract().response().asString();
+		System.err.println(response);
 	}
 
 }
