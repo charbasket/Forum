@@ -78,7 +78,7 @@ public class PostDaoList implements PostDaoInterface {
 		String status;
 		setPostImage(post);
 		if (bodyContainsBannedWords(post)) {
-			status = "Post contains banned workds";
+			status = "Post contains banned words";
 			return status;
 		}
 		try {
