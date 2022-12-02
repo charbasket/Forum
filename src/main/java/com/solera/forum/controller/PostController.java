@@ -3,6 +3,7 @@ package com.solera.forum.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.solera.forum.model.entity.Post;
 import com.solera.forum.model.repository.PostDaoInterface;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/posts")
 public class PostController {
