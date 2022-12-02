@@ -72,9 +72,6 @@ public class PostDaoList implements PostDaoInterface {
 
 	@Override
 	public String addPost(Post post) {
-		// Status = -1 -> fail to add the post
-		// Status = 1 -> post added
-		// Status = 0 -> post contains banned words
 		String status;
 		setPostImage(post);
 		if (bodyContainsBannedWords(post.getBody())) {
