@@ -47,6 +47,18 @@ public class PostDaoList implements PostDaoInterface {
 	}
 
 	@Override
+	public List<String> findAllThreads() {
+		List<String> listOfThreads = new ArrayList<String>();
+		System.err.println(listOfPosts.size());
+		for (int i = 0; i < listOfPosts.size(); i++) {
+			if (!listOfThreads.contains(listOfPosts.get(i).getThread())) {
+				listOfThreads.add(listOfPosts.get(i).getThread());
+			}
+		}
+		return listOfThreads;
+	}
+
+	@Override
 	public Post setPostImage(Post post) {
 
 		if (post.getCategory().toLowerCase().equals("doubt")) {
