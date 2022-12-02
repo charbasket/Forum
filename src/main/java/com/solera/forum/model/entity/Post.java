@@ -23,6 +23,15 @@ public class Post implements Serializable {
 		this.publicPost = publicPost;
 	}
 
+	public Post(String title, String thread, String category, String body, boolean publicPost, String image) {
+		this.title = title;
+		this.thread = thread;
+		this.category = category;
+		this.body = body;
+		this.publicPost = publicPost;
+		this.image = image;
+	}
+
 	public String getTitle() {
 		return title;
 	}

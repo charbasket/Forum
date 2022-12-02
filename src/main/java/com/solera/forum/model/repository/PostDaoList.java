@@ -21,8 +21,11 @@ public class PostDaoList implements PostDaoInterface {
 	}
 
 	private void loadPosts() {
-		listOfPosts.add(new Post("Java 18", "Computer Science", "QA", "I want to create an api", true));
-		listOfPosts.add(new Post("Ferrari", "Cars", "News", "New Ferrari", false));
+		listOfPosts.add(new Post("Java 18", "Computer Science", "doubt", "I want to create an api but i dont know how",
+				true, "questionMark"));
+		listOfPosts.add(new Post("Ferrari", "Cars", "suggestion", "New Ferrari launch on 2023", false, "loudSpeaker"));
+		listOfPosts.add(new Post("Nivea", "Beauty", "clarification", "New Ferrari launch on 2023", false, "pencil"));
+
 	}
 
 	private void loadBannedWords() {
