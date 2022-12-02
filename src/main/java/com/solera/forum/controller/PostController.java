@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.solera.forum.model.entity.Post;
 import com.solera.forum.model.repository.PostDaoInterface;
 
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/posts")
 public class PostController {
