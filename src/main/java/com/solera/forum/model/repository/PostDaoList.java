@@ -12,12 +12,10 @@ public class PostDaoList implements PostDaoInterface {
 
 	private List<Post> listOfPosts;
 	private List<String> bannedWords;
-	private List<Post> postByThread;
 
 	public PostDaoList() {
 		listOfPosts = new ArrayList<Post>();
 		bannedWords = new ArrayList<String>();
-		postByThread = new ArrayList<Post>();
 		loadPosts();
 		loadBannedWords();
 	}
@@ -39,7 +37,7 @@ public class PostDaoList implements PostDaoInterface {
 
 	@Override
 	public List<Post> findPostByThread(String thread) {
-
+		List<Post> postByThread = new ArrayList<Post>();
 		for (int i = 0; i < listOfPosts.size(); i++) {
 			if (listOfPosts.get(i).getThread().toLowerCase().equals(thread.toLowerCase())) {
 				postByThread.add(listOfPosts.get(i));
