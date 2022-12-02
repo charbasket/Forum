@@ -44,7 +44,7 @@ public class PostTest {
 	public void checkBodyContainsBannedWords() {
 		String body = "hola";
 
-		String response = given().header("Content-type", "text/plain").body(body).when().post("/checkBody").then()
+		String response = given().header("Content-type", "text/plain").body("").when().post("/checkBody").then()
 				.assertThat().statusCode(200).extract().response().asString();
 		System.err.println(response);
 	}
