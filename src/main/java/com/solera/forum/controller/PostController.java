@@ -36,7 +36,7 @@ public class PostController {
 	}
 
 	@PostMapping("/add")
-	public String addPost(@RequestBody Post post) {
+	public boolean addPost(@RequestBody Post post) {
 		return iPost.addPost(post);
 	}
 

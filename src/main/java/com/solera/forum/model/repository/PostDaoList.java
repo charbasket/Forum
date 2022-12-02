@@ -71,21 +71,20 @@ public class PostDaoList implements PostDaoInterface {
 	}
 
 	@Override
-	public String addPost(Post post) {
-		String status;
+	public boolean addPost(Post post) {
+		boolean add = false;
 		setPostImage(post);
 		if (bodyContainsBannedWords(post.getBody())) {
-			status = "Post contains banned words";
-			return status;
+			return add;
 		}
 		try {
 			listOfPosts.add(post);
-			status = "Post added";
+			add = true;
 		} catch (Exception e) {
 			e.printStackTrace();
-			status = "Something went wrong";
+
 		}
-		return status;
+		return add;
 	}
 
 	@Override

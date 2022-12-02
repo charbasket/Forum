@@ -9,7 +9,7 @@ public interface PostDaoInterface {
 
 	List<Post> findPostByThread(String thread);
 
-	String addPost(Post post);
+	boolean addPost(Post post);
 
 	Post setPostImage(Post post);
 
