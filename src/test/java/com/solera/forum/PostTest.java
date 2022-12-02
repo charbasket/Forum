@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 
-public class NewTest {
+public class PostTest {
 
 	@BeforeClass
 	public void setUp() {
@@ -41,19 +41,5 @@ public class NewTest {
 				.response().asString();
 		Assert.assertEquals(response, "false");
 	}
-
-//	@Test
-//	public void getPostByThreadAndThreadDoesNotExist() {
-//		String thread = "asdf";
-//		int size = 0;
-//
-//		String response = given().when().get(thread).then().assertThat().statusCode(200).extract().response()
-//				.asString();
-//		System.err.println(response);
-//		JsonPath js = new JsonPath(response);
-//		size = js.getInt("size()");
-//
-//		Assert.assertEquals(size, 0);
-//	}
 
 }

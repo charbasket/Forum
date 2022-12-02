@@ -60,10 +60,10 @@ public class PostDaoList implements PostDaoInterface {
 	}
 
 	@Override
-	public boolean bodyContainsBannedWords(Post post) {
+	public boolean bodyContainsBannedWords(String body) {
 		boolean containsBannedWords = true;
 		for (int i = 0; i < bannedWords.size(); i++) {
-			if (post.getBody().contains(bannedWords.get(i))) {
+			if (body.contains(bannedWords.get(i))) {
 				return containsBannedWords;
 			}
 		}
@@ -77,7 +77,7 @@ public class PostDaoList implements PostDaoInterface {
 		// Status = 0 -> post contains banned words
 		String status;
 		setPostImage(post);
-		if (bodyContainsBannedWords(post)) {
+		if (bodyContainsBannedWords(post.getBody())) {
 			status = "Post contains banned words";
 			return status;
 		}

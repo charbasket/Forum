@@ -13,7 +13,7 @@ public interface PostDaoInterface {
 
 	Post setPostImage(Post post);
 
-	boolean bodyContainsBannedWords(Post post);
+	boolean bodyContainsBannedWords(String body);
 
 	boolean checkPostByTitleAndThread(String thread, String title);
 
