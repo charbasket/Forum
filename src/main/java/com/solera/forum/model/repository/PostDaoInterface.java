@@ -15,6 +15,6 @@ public interface PostDaoInterface {
 
 	boolean bodyContainsBannedWords(Post post);
 
-	boolean checkPostByTitleAndThread(String title);
+	boolean checkPostByTitleAndThread(String thread, String title);
 
 }

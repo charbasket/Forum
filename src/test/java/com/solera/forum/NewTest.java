@@ -1,6 +1,6 @@
 package com.solera.forum;
 
-import static org.testng.Assert.assertEquals;
+import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -14,8 +14,8 @@ public class NewTest {
 	}
 
 	@Test
-	public void f() {
-		assertEquals(1, 1);
-
+	public void getAllPost() {
+		String response = given().when().get().then().assertThat().statusCode(200).extract().response().asString();
 	}
+
 }

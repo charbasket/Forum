@@ -94,8 +94,9 @@ public class PostDaoList implements PostDaoInterface {
 	}
 
 	@Override
-	public boolean checkPostByTitleAndThread(String title) {
+	public boolean checkPostByTitleAndThread(String thread, String title) {
 		boolean postAlreadyExists = true;
+		findPostByThread(thread);
 		for (int i = 0; i < postByThread.size(); i++) {
 			if (postByThread.get(i).getTitle().toLowerCase().equals(title)) {
 				return postAlreadyExists;

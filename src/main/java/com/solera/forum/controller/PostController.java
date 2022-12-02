@@ -30,9 +30,9 @@ public class PostController {
 		return iPost.findPostByThread(thread);
 	}
 
-	@GetMapping("/checkTitle/{title}")
-	public boolean checkTitle(@PathVariable String title) {
-		return iPost.checkPostByTitleAndThread(title);
+	@GetMapping("/check/{thread}/{title}")
+	public boolean checkThreadAndTitle(@PathVariable String thread, @PathVariable String title) {
+		return iPost.checkPostByTitleAndThread(thread, title);
 	}
 
 	@PostMapping("/add")
